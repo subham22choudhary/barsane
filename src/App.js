@@ -12,6 +12,8 @@ import AboutPage from "./pages/about";
 import ContactPage from "./pages/contact";
 import NoPage from "./pages/nopage";
 
+import Bookpuja from "./components/bookingpuja/bookpuja";
+
 import Footer from "./components/footer";
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="/bookpuja" element={<Bookpuja />} />
         </Routes>
         <Footer />
       </BrowserRouter>

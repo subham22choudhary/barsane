@@ -1,7 +1,7 @@
 import "./homediv.css";
 
 import images from "../img";
-
+import { Outlet, Link } from "react-router-dom";
 export default function HomeDiv() {
   return (
     <>
@@ -15,11 +15,9 @@ export default function HomeDiv() {
 
               <div className="col-md-6 col-12">
                 <p className="text-1 mb-0">
-                  Connect with experienced Hindu Pandits online for personalized
-                  puja ceremonies. Browse a curated collection of sacred books
-                  and rituals. Schedule a video call for spiritual guidance and
-                  traditional ceremonies. Experience the divine from the comfort
-                  of your home with our virtual Pandit services.
+                  Experience virtual Hindu puja ceremonies and spiritual
+                  guidance from expert Pandits at home. Explore sacred books,
+                  schedule video calls for traditional rituals.
                 </p>
               </div>
             </div>
@@ -30,8 +28,10 @@ export default function HomeDiv() {
               <div className="col-md-4 col-12 mb-3 mb-md-0 mb-lg-0">
                 <div className="book-card d-flex justify-content-center">
                   <div className="card-video">
-                    <h4 className="mb-0 text-center">
-                      Book your Puja on 1:1 Video Call
+                    <h4 className="mb-0 text-center card-puja-text-1">
+                      <Link to="/bookpuja">
+                        Book your Puja on 1:1 Video Call
+                      </Link>
                     </h4>
                   </div>
                 </div>
@@ -39,7 +39,7 @@ export default function HomeDiv() {
               <div className="col-md-4 col-12">
                 <div className="book-card d-flex justify-content-center">
                   <div className="card-video">
-                    <h4 className="mb-0 text-center">
+                    <h4 className="mb-0 text-center card-puja-text-1">
                       Book your Puja on in person visit
                     </h4>
                   </div>
@@ -49,6 +49,8 @@ export default function HomeDiv() {
           </div>
         </div>
       </div>
+
+      <Outlet />
     </>
   );
 }

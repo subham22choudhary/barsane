@@ -7,9 +7,9 @@ export default function Header() {
     <>
       <header className="navbar navbar-expand-md  cls-1 mb-5">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img src={images[0]} className="img-fluid img1" alt="Image" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,7 +24,7 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link to="/home" className="nav-link">
+                <Link to="/" className="nav-link">
                   Home
                 </Link>
               </li>
